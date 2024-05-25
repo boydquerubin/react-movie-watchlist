@@ -1,31 +1,27 @@
 .App {
   text-align: center;
+  background: #333;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 35vmin;
+  animation: App-logo-spin infinite 15s linear;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #1a202c;
+  min-height: 90vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ddd;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #4caf50;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +31,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  background: #202020;
+  color: #ddd;
+}
+
+header {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: #0077cc;
+}
+
+button {
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  background-color: #0077cc;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 20px 5px;
+}
+
+button:hover {
+  background-color: white;
+  color: #0077cc;
+}
+
+.page {
+  padding: 20px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-container {
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.movie-card {
+  width: 280px;
+  padding: 15px;
+  background: #282c34;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.watchlist {
+  width: 500px;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  text-align: center;
 }
